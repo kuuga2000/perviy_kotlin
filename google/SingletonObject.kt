@@ -1,4 +1,11 @@
-
+/**
+ * When working with Compose,
+ * you may have noticed some interesting syntax
+ * when specifying the size of UI elements.
+ * Numeric types, such as Double,
+ * appear to have properties like dp and sp specifying dimensions.
+ * padding(16.dp)
+ */
 object StudentProgressBasic {
     var total: Int = 10
     var answered: Int = 3
