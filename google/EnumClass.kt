@@ -13,5 +13,7 @@ fun main() {
     val question2 = Questions<Boolean>("The sky is green. True or false", false, Difficulty.EASY)
     val question3 = Questions<Int>("How many days are there between full moons?", 28, Difficulty.HARD)
 
-    println(question2.difficulty)
+    println(question3.difficulty)
+    println(question2.difficulty.equals(Difficulty.EASY))
+    println(question1.difficulty.equals(Difficulty.HARD))
 }
