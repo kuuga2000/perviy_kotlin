@@ -20,4 +20,6 @@ suspend fun printForecast() {
 suspend fun printTemperature() {
     delay(1000)
     println("30\u00b0C")
-} 
+}
+
+//Synchronous code
