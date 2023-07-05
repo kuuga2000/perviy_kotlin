@@ -1,17 +1,19 @@
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
-import kotlin.system.measureTimeMillis
 
 fun main() {
-    val time = measureTimeMillis {
-        runBlocking {
-            println("Weather forecast")
+    runBlocking {
+        println("Weather forecast")
+        launch {
             printForecast()
+        }
+        launch {
             printTemperature()
         }
     }
-    println("Execution time: ${time / 1000.0} seconds")
 }
+
 suspend fun printForecast() {
     delay(1000)
     println("Sunny")
@@ -22,4 +24,4 @@ suspend fun printTemperature() {
     println("30\u00b0C")
 }
 
-//Synchronous code
+//Asynchronous code
