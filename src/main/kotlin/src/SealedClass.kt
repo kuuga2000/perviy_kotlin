@@ -11,7 +11,7 @@ fun getData(result: Result) {
         else -> {}
     }
 }
-sealed class Result(val message: String) {
+sealed class Result(private val message: String) {
     fun showMessage() {
         println("Result: $message")
     }
